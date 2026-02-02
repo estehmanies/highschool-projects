@@ -4,6 +4,7 @@
   --bg-card: #1c232e;
   --text-main: #9ab;
   --text-bright: #fff;
+  --text-grey: rgb(191, 200, 208);
   --accent-green: #00e054;
   --accent-orange: #ff8000;
   --border-color: #445566;
@@ -31,6 +32,7 @@ section {
 }
 
 /* --- Typography --- */
+
 h2 {
   color: var(--text-bright);
   font-size: 0.9rem;
@@ -42,8 +44,8 @@ h2 {
   margin-bottom: 25px;
 }
 
-h3 { color: var(--text-bright); margin-bottom: 5px; }
-h4 { color: var(--accent-green); font-weight: normal; margin-top: 0; }
+h3 { color: var(--text-bright); margin-bottom: 5px; font-family: "Abril Fatface", serif;}
+h4 { color: var(--text-grey); font-weight: normal; margin-top: 0; font-family: "Abril Fatface", serif;}
 
 /* --- About Section --- */
 .about {
@@ -52,7 +54,7 @@ h4 { color: var(--accent-green); font-weight: normal; margin-top: 0; }
   color: var(--text-bright);
 }
 
-/* --- Previous Winner Section (Hero Style) --- */
+/* --- Previous Winner Section --- */
 .winner-container {
   display: flex;
   gap: 30px;
