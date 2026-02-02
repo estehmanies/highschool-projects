@@ -1,0 +1,36 @@
+.container{
+        display: flex;
+        gap: 20px; /* Jarak antar kotak */
+        justify-content: center;
+        flex-wrap: wrap;
+}
+
+.about {
+
+}
+
+.lastWinner {
+
+}
+
+.winner-container {
+    display: flex;       /* Turns the container into a flexbox */
+    align-items: flex-start; /* Keeps text aligned to the top */
+    gap: 20px;           /* Adds space between the image and text */
+}
+
+.winner-container img {
+  flex-shrink: 0;      /* Prevents the image from getting squished */
+  width: 200px;        /* Set your preferred width */
+  height: auto;
+}
+
+.winner-text {
+    display: flex;
+    flex-direction: column; /* This stacks the name ABOVE the paragraph */
+    gap: 5px;               /* Space between the name and the paragraph */
+}
+
+.winner-text h4  {
+    margin: 0;
+}
