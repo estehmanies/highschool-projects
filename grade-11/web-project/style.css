@@ -1,48 +1,125 @@
-body{
-    background-color:rgb(14, 53, 87);
-}
-.header{
-    font-family: impact;
-    text-align: center;
-    font-size: 30px;
-    color:aliceblue
-}
-.img{
-    float: left;
-    margin: 15px;
-}
-.name{
-    margin-top: 20px;
-    margin-bottom: -16px;
-    color:aliceblue;
-    font-family: "Zalando Sans Expanded", sans-serif;
-}
-.class{
-    color:aliceblue;
-    font-family: "Roboto Condensed", sans-serif;
-}
-.paragraph{
-    color:aliceblue;
-    margin: 10px;
-    font-family: "Roboto Condensed", sans-serif;
-}
-.star{
-    text-align:right;
-    font-size: 20px;
-    color:aliceblue;
-    margin-right: 20px;
-}
-.mainj{
-    border: 3px solid rgba(64, 151, 162, 0.649);
-    border-radius: 10px;
-    display: flow-root;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10px
-}
-#next{
-    color:rgb(229, 254, 254);
-    text-align: right;
-    font-family: "Roboto Condensed", sans-serif;
+/* --- Global Variables (Derived from your reference) --- */
+:root {
+  --bg-dark: #14181c;
+  --bg-card: #1c232e;
+  --text-main: #9ab;
+  --text-bright: #fff;
+  --text-grey: rgb(191, 200, 208);
+  --accent-green: #00e054;
+  --accent-orange: #ff8000;
+  --border-color: #445566;
 }
 
+/* --- Base Styles --- */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- Header Section --- */
+.header {
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto 30px auto;
+}
+
+.header h1 {
+    color: var(--text-bright);
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.header hr {
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 10px;
+}
+
+/* --- Main Content Cards --- */
+.mainj {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    display: flow-root;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    padding: 15px;
+    transition: transform 0.2s ease, outline 0.1s ease;
+}
+
+.mainj:hover {
+    outline: 2px solid var(--accent-green);
+    background-color: #242c38;
+}
+
+.img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    height: 180px; /* Adjusted for card balance */
+}
+
+/* --- Typography inside Cards --- */
+.name {
+    color: var(--text-bright);
+    font-family: "Abril Fatface", serif; /* Specific font from your ref */
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.class {
+    color: var(--text-grey);
+    font-family: "Segoe UI", sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.paragraph {
+    color: var(--text-main);
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.6;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+/* --- Star Ratings & Decorations --- */
+.mainj hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 10px 0;
+    opacity: 0.3;
+}
+
+.star {
+    text-align: right;
+    font-size: 1.2rem;
+    color: var(--accent-green);
+    margin: 10px 0 0 0;
+}
+
+/* --- Footer & Links --- */
+footer {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: right;
+}
+
+#next {
+    color: var(--text-bright);
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#next:hover {
+    color: var(--accent-orange);
+}
