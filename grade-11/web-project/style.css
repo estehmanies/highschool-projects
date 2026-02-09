@@ -50,7 +50,7 @@
   gap: 5px;
 }
 
-.nav a {
+.navbutton {
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -58,9 +58,11 @@
   letter-spacing: 1px;
   color: #9ab;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 15px;
   transition: color 0.2s;
 }
+
+
 
 .nav a:hover {
   color: #fff;
@@ -68,7 +70,7 @@
 
 /* --- The "+ LOG" Button --- */
 .log-button {
-  background-color: #00e054; /* Iconic Letterboxd Green */
+  background-color: #00ac1c; /* Iconic Letterboxd Green */
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -83,7 +85,7 @@
 }
 
 .log-button:hover {
-  background-color: #00b845; /* Slightly darker on hover */
+  background-color: #028b19; /* Slightly darker on hover */
 }
 
 /* --- Footer Styling --- */

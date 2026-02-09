@@ -14,144 +14,135 @@
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* Menggunakan Inter sesuai saran font Google sebelumnya */
+    font-family: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 20px;
+    line-height: 1.4; /* Lebih ringkas */
 }
 
 /* --- Header Section --- */
 .header {
     text-align: center;
     max-width: 950px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
 }
 
 .header h1 {
     color: var(--text-bright);
-    font-size: 1.2rem;
+    font-size: 0.85rem; /* Font header lebih kecil & tegas ala Letterboxd */
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .header hr {
     border: 0;
     border-bottom: 1px solid var(--border-color);
     margin-top: 10px;
+    opacity: 0.5;
 }
 
 /* --- Main Content Cards --- */
 .mainj {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 5px;
+    border-radius: 4px;
     display: flow-root;
     max-width: 800px;
-    margin: 0 auto 20px auto;
-    padding: 20px;
-    /* Efek transisi untuk pembesaran kotak */
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), outline 0.2s ease, box-shadow 0.3s ease;
+    margin: 0 auto 12px auto; /* Margin lebih rapat (compact) */
+    padding: 15px; /* Padding lebih kecil */
+    /* Menghapus transform scale, hanya transisi warna & shadow */
+    transition: outline 0.2s ease, background-color 0.2s, box-shadow 0.3s ease;
 }
 
-/* HOVER KOTAK: Membesar sedikit dan tambah bayangan */
+/* HOVER KOTAK: Tanpa Zoom, hanya highlight & shadow */
 .mainj:hover {
     outline: 2px solid var(--accent-green);
     background-color: #242c38;
-    transform: scale(1.02); /* Sedikit membesar agar tidak terlalu ekstrim di list panjang */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
-/* Membungkus gambar agar zoom tidak berantakan */
 .img {
     float: left;
-    margin-right: 20px;
-    border-radius: 4px;
+    margin-right: 15px;
+    border-radius: 3px;
     border: 1px solid var(--border-color);
-    height: 150px;
-    width: 150px;
+    height: 120px; /* Ukuran gambar lebih compact */
+    width: 120px;
     object-fit: cover;
-    /* Efek transisi untuk zoom gambar */
-    transition: transform 0.4s ease;
+    /* Menghapus transisi transform */
+    transition: border-color 0.3s ease;
 }
 
-/* HOVER GAMBAR: Zoom in di dalam bingkainya */
+/* Menghapus Hover Zoom pada Gambar */
 .mainj:hover .img {
-    transform: scale(1.1);
     border-color: var(--accent-green);
 }
 
 /* --- Typography inside Cards --- */
 .name {
     color: var(--text-bright);
-    font-family: "Georgia", serif;
-    font-weight: 400;
-    font-size: 1.6rem;
+    /* Menggunakan Lora untuk kesan judul film/makanan yang premium */
+    font-family: 'Lora', "Georgia", serif; 
+    font-weight: 600;
+    font-size: 1.3rem; /* Sedikit lebih kecil agar compact */
     margin-top: 0;
-    margin-bottom: 5px;
-    transition: color 0.3s ease;
-}
-
-.mainj:hover .name {
-    color: var(--text-bright); /* Tetap terang saat hover */
+    margin-bottom: 3px;
 }
 
 h4 {
     color: var(--text-grey);
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-weight: normal;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.7rem; /* Metadata sangat kecil ala Letterboxd */
     letter-spacing: 1px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .paragraph {
     color: var(--text-main);
-    line-height: 1.6;
-    margin-top: 10px;
-    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 8px;
+    font-size: 0.85rem; /* Ukuran teks review lebih kecil */
 }
 
 /* --- Star Ratings & Decorations --- */
 .mainj hr {
     border: 0;
     border-top: 1px solid var(--border-color);
-    margin: 15px 0 5px 0;
-    opacity: 0.3;
+    margin: 12px 0 5px 0;
+    opacity: 0.2;
     clear: both;
 }
 
 .star {
     text-align: right;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Bintang lebih kecil agar proporsional */
     color: var(--accent-green);
     margin: 0;
     transition: text-shadow 0.3s ease;
 }
 
-/* Efek Bintang Bercahaya */
 .mainj:hover .star {
-    text-shadow: 0 0 10px var(--accent-green);
+    text-shadow: 0 0 8px var(--accent-green);
 }
 
 /* --- Footer & Navigation --- */
 footer {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 30px auto;
     text-align: center;
-}
-
-footer a {
-    text-decoration: none;
 }
 
 #next {
     color: var(--text-main);
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     transition: color 0.2s;
 }
 
