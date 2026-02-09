@@ -10,10 +10,19 @@
   --border-color: #445566;
 }
 
+h1, h2, h3, h4, p {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+iframe {
+  border: none;
+}
+
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   line-height: 1.4; /* Tighter line height */
 }
@@ -22,34 +31,38 @@ body {
 main {
   max-width: 950px;
   margin: 0 auto;
-  padding: 15px; /* Reduced padding */
+  padding: 15; /* Reduced padding */
+  padding-top: 15px;
 }
 
 section {
-  margin-bottom: 30px; /* More compact spacing between sections */
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 20px;
+  border-bottom: none !important; /* This removes the horizontal line */
+  margin-bottom: 20px; /* Reduced margin to pull content up */
+  padding-bottom: 0;
+  
 }
 
 /* --- Typography --- */
 h2 {
   color: var(--text-bright);
-  font-size: 0.75rem; /* Smaller, sharper section headers */
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem; /* Smaller, sharper section headers */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--border-color);
   display: inline-block;
   padding-bottom: 3px;
-  margin-bottom: 15px;
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 15px; /* Tighten space below heading */
   font-weight: bold;
 }
 
 h3 { 
   color: var(--text-bright); 
   margin: 5px 0 2px 0; /* Tight margins */
-  font-family: "Georgia", Times, serif; 
-  font-weight: 400; 
+  font-family: 'Lora', Georgia, serif; 
+  font-weight: 600;
   font-size: 1.1rem; /* Smaller titles for grid view */
 }
 
@@ -57,7 +70,8 @@ h4 {
   color: var(--text-grey); 
   font-weight: normal; 
   margin-top: 5px; 
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 0.7rem; /* Very small metadata like Letterboxd */
   text-transform: uppercase;
 }
@@ -69,10 +83,11 @@ h4 {
   color: var(--text-main);
   max-width: 650px;
   margin: 0 auto;
+  margin-top: -10px;
 }
 
-/* --- Winner Section (Compact) --- */
-.winner-container {
+/* --- Container (Compact) --- */
+.container {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -81,15 +96,15 @@ h4 {
   border-radius: 6px;
 }
 
-.winner-container img {
+.container img {
   width: 140px; /* Smaller feature image */
   height: 140px;
   object-fit: cover; 
   border-radius: 50%;
 }
 
-/* --- Student Grid & Cards (Ultra Compact) --- */
-.student-grid {
+/* --- Grid & Cards (Ultra Compact) --- */
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 12px; /* Tighter gap between cards */
@@ -143,3 +158,4 @@ a {
 @media (max-width: 768px) {
   .student-grid { grid-template-columns: 1fr; }
 }
+
